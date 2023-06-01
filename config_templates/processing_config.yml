@@ -1,0 +1,47 @@
+# Processing Config for Hyperspectral imager
+
+scantype: 
+# single, widefield, zstack, timelapse
+  timelapse
+
+calibration_dir: 
+  G:\Hyperspectral\TESTDATA\calibration
+
+processing:
+  sampling_pix: 100  # pixel size of reconstructed hypercube
+  wavelengths_num: 50  # number of discretised wavelengths in hypercube
+  filtw0: 0  # gaussian spatial filter size
+  # CHOOSE ONE 
+  # bandwidth + central wavelength
+  bandwidth_nm: 20
+  lambda_centre_nm: 680
+  # OR 
+  # max and min wavelengths
+  #lambda_min_nm: 670
+  #lambda_max_nm: 690
+
+stitch: 
+  hyper:
+    overlap_x: 0.2
+    overlap_y: 0.2
+    rot: 7.92
+    n_x: 17
+    n_y: 17
+  bf:
+    overlap_x: 0.2
+    overlap_y: 0.2
+    rot: 0
+    crop_x: 297
+    crop_y: 383
+    n_crop: 535
+    n_x: 17
+    n_y: 17   
+
+directories: 
+  hyper: hyper
+  bf: bf
+  lasing: lasing
+
+
+
+

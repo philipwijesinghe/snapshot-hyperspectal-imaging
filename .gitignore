@@ -1,0 +1,9 @@
+_superseded/
+__pycache__/
+
+
+*.gif
+*.tif
+*.mat
+*.asv
+
